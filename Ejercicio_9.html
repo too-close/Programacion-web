@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 17/05/2022
+    Descripcion: Ejercicio 9 parcial 3
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Etiquetas de uso especifico II" />
+        <meta nam="keywords" content="html, tags, style, script"/>
+		<meta name="generator" content="Brackets" />
+		<meta name="revised" content="Martes, 17 de Mayo 2022" /> 
+        <script>
+            function muestraInformacion(objEvento) {
+                var evento = objEvento || window.event;
+                var mensaje = "Tipo de evento: " +
+                evento.type + "<br>";
+                mensaje += "Key code: " + evento.KeyCode + "<br>";
+                mensaje += "Char code: " + String.fromCharCode(evento.charCode) + "<br>";
+                keyboard.innerHTML += "----- ----- ----- ------<br>" + mensaje;
+                keyboard.style.backgroundColor = 'black';
+                keyboard.style.color = 'lightgreen';
+                }
+            function cargaInformacion(objEvento) {
+                    var evento = objEvento || window.event;
+                    var puntoX = evento.clientX;
+                    var puntoY = evento.clientY;
+                    var mensaje = "Coordenadas cliente: (" + puntoX + "," + puntoY + ")<br>";
+                mouse.innerHTML += "----- ----- ----- ----- -----<br>" + mensaje;
+                mouse.style.backgroundColor = 'black';
+                mouse.style.color = 'lightblue';
+                }
+                window.onload = function() {
+                    document.onkeypress = muestraInformacion;
+                    document.onkeydown = muestraInformacion;
+                    document.onkeyup = muestraInformacion;
+                    
+                    document.onclick = cargaInformacion;
+                }
+                
+        </script>
+    </head>
+    <body>
+       <main>
+           <h1>Document Object</h1>
+           <hgroup>
+               <h2>Teclado</h2>
+               <div id="keyboard"></div>
+           </hgroup>
+           <hgroup>
+               <h2>Rat&oacute;n</h2>
+               <div id="mouse"></div>
+           </hgroup>
+        </main>
+    </body>
+</html>

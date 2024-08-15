@@ -1,0 +1,58 @@
+*
+{
+      text-align: center;
+}
+body
+{
+
+      background-color: lightblue;
+}
+
+h1
+{
+      font-weight: bold;
+      font-style: oblique;
+      text-decoration: underline;
+      text-transform: uppercase;
+}
+
+p
+{
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-size: 20px;
+}
+
+div
+{
+      margin: 10px 5%;
+	padding: 2% 15%;
+	border: 5px solid transparent;
+      border-radius: 20px;
+      background-color: aliceblue;
+      font-size:18px;
+}
+table
+{
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      border: 3px solid rgb(250, 191, 250);
+}
+.botones
+{
+      background-color: rgb(221, 159, 245);
+      border-radius: 10px;
+      padding: 15px;
+      border: none;
+      font-style: italic;
+	font-weight: 800;
+      font-size: 16px;
+      transition-duration: 0.4s;
+      width: 150px;
+ }
+.botones:hover 
+{
+      color: rgb(219, 219, 219);
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

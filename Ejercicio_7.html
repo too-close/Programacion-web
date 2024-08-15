@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 10/05/2022
+    Descripcion: Ejercicio 7 parcial 3
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Etiquetas de uso especifico II" />
+        <meta nam="keywords" content="html, tags, style"/>
+		<meta name="generator" content="Brackets" />
+		<meta name="revised" content="martes, 10 de mayo 2022" />
+     <style type="text/css">
+         #tres
+         {
+             column-count: 3;
+             column-gap: 50px;
+             text-align: justify;
+             column-rule: 1px dotted black;
+         }
+         ul
+         {
+             list-style: none;
+             padding-left: 10px;
+             margin-left: 10px;             
+         }
+         li::before
+         {
+             content: "\2615";
+             padding-right: 8px;          
+         }
+         li
+         {
+             color: green;             
+         }
+         ul li:nth-child(odd)
+         {
+             background-color: white;
+         }
+          ul li:nth-child(even)
+         {
+             background-color: lightgray;
+         }
+         .tooltip
+         {
+             position: relative;
+             display: inline-block;
+             border-bottom: 1px dotted black;
+         }
+         .tooltip .tooltiptext
+         {
+             visibility: hidden;
+             width: 120px;
+             background-color: black;
+             color: #FFF;
+             text-align: center;
+             padding: 2px 0;
+             border-radius: 6px;
+             position: absolute;
+             z-index: 1;
+         }
+         .tooltip:hover .tooltiptext
+         {
+             visibility: visible;
+             
+         }
+        </style>
+    </head>
+    <body>
+        <main>
+            <hgroup>
+                <h2>columnas</h2>
+                <div style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec est vel purus tristique tincidunt ac ac tortor. Praesent maximus, lorem vitae tempor blandit, leo mauris aliquet est, quis blandit nisi tortor quis tellus. Nullam malesuada mi sed vestibulum bibendum. Sed ex tortor, consequat sed leo ut, molestie tincidunt leo. Cras egestas consequat rutrum. Fusce rutrum, augue vitae dignissim auctor, turpis nisl eleifend lacus, non gravida odio tortor at dolor. Praesent varius porta hendrerit. Morbi nunc enim, dapibus finibus ligula aliquet, pellentesque consectetur risus. Praesent vitae auctor arcu, nec interdum dui. Pellentesque facilisis, metus in rhoncus semper, erat urna feugiat dui, quis placerat massa urna vitae erat. Vestibulum dignissim lacinia efficitur. Donec accumsan nunc sit amet enim feugiat gravida. Integer tincidunt interdum justo, vitae fermentum dolor vestibulum vel. Morbi dignissim nulla malesuada, aliquet enim molestie, imperdiet urna. Aenean vel lorem feugiat, ultricies justo at, ultricies purus.</div><br>
+
+                <div id="tres">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum rutrum facilisis nisl, ut interdum metus vulputate sit amet. Quisque congue non est in porttitor. Sed sit amet orci eu nisl scelerisque convallis. Etiam vitae varius ligula. Donec quis eros turpis. Praesent eget vulputate nulla. Vivamus velit libero, porta a est euismod, pretium luctus ex. Praesent bibendum rutrum dui, porta consequat eros lobortis ut. Integer a sem a sapien ullamcorper fermentum. Curabitur hendrerit ante purus.</div><br>
+                
+                <div style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec est vel purus tristique tincidunt ac ac tortor. Praesent maximus, lorem vitae tempor blandit, leo mauris aliquet est, quis blandit nisi tortor quis tellus. Nullam malesuada mi sed vestibulum bibendum. Sed ex tortor, consequat sed leo ut, molestie tincidunt leo. Cras egestas consequat rutrum. Fusce rutrum, augue vitae dignissim auctor, turpis nisl eleifend lacus, non gravida odio tortor at dolor. Praesent varius porta hendrerit. Morbi nunc enim, dapibus finibus ligula aliquet, pellentesque consectetur risus. Praesent vitae auctor arcu, nec interdum dui. Pellentesque facilisis, metus in rhoncus semper, erat urna feugiat dui, quis placerat massa urna vitae erat. Vestibulum dignissim lacinia efficitur. Donec accumsan nunc sit amet enim feugiat gravida. Integer tincidunt interdum justo, vitae fermentum dolor vestibulum vel. Morbi dignissim nulla malesuada, aliquet enim molestie, imperdiet urna. Aenean vel lorem feugiat, ultricies justo at, ultricies purus.</div><br>
+            </hgroup>
+            <hgroup>
+                <h2>Lista personalizada</h2>
+                <ul>
+                    <li>Primero</li>
+                    <li>segundo</li>
+                    <li>tercero</li>
+                    <li>cuarto</li>
+                    <li>quinto</li>
+                </ul>
+            </hgroup>
+                <hgroup>
+                <h2>Lista ordenada personalizada</h2>
+                <ol type="A" start="27">
+                    <li>Primero</li>
+                    <li>segundo</li>
+                    <li>tercero</li>
+                    <li>cuarto</li>
+                    <li>quinto</li>
+                </ol>
+            </hgroup>
+            <hgroup>
+                <h2>Simbolos especiales</h2>
+                <p>I will display &spades;</p>
+                <p>I will display&#9824;</p>
+                <p>I will display&#x2660;</p>
+            </hgroup>
+            <hgroup>
+                <h2>Tooltip</h2>
+                <div class="tooltip">
+                    Texto con tooltip.
+                    <span class="tooltiptext">
+                        Tooltip ejemplo...
+                    </span>
+                </div>
+                Este texto no tiene un tooltip.
+            </hgroup>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 13/05/2022
+    Descripcion: Ejercicio 8 parcial 3
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Javascript- Document object model" />
+        <meta name="keywords" content="html, tags, style, script,a,button, input"/>
+		<meta name="generator" content="Brackets" />
+		<meta name="revised" content="viernes, 13 de mayo 2022" />
+        <script>
+            function resalta() {
+                switch(element.style.borderColor) {
+                    case 'silver':
+                        element.style.borderColor = 'black'                       ;
+                        break;
+                    case 'black':
+                         element.style.borderColor = 'silver'                       ;
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body onload="bienvenido()">
+        <main>
+            <h1>Document Object Model</h1>
+            <hgroup>
+                <h2>Element</h2>
+                <a class="buscador" id="google"
+                   href="https://www.google.com">Ir a Google...</a><br>
+                
+                 <a class="redsocial" id="facebook"
+                   href="https://www.facebook.com">Ir a facebook...</a><br>
+                
+                <a class="redsocial" id="twitter"
+                   href="https://www.twitter.com">Ir a twitter...</a><br>
+                
+                <a class="redsocial" id="instagram"
+                   href="https://www.instagram.com">Ir a instagram...</a><br>
+                
+                <a class="multimedia" id="youube"
+                   href="https://www.youtube.com">Ir a youtube...</a><br>
+               </hgroup>
+            <hgroup>
+                <h2>Etiqueta</h2>
+                <button               onclick="document.body.style.backgroundColor = 'lightgreen';">Cambia de fondo</button>
+            </hgroup>
+            <hgroup>
+                <h2>Script</h2>
+                <button id="background">Cambia de fondo</button>
+                <script>
+                    /*Ejemplo de basico*/
+                    var button=document.getElementById('background'); function cambiaColor(){ document.body.style.backgroundColor = 'gray';
+                    }
+                    button.addEventListener('dblclick',cambiaColor);
+                    /*Ejemplo optimizado*/
+                    document.getElementById('background').addEventListener('click',() =>{
+                        document.body.style.backgroundColor='lightblue';
+                    });                                    
+                </script>
+            </hgroup>
+            <hgroup>
+                <h2>Código externo</h2>
+                <button id="changeBackground">Cambia fondo</button>
+                <script src="codigo/script.js"> </script>
+            </hgroup>
+            <hgroup>
+                <h2>Alert</h2>
+                <p onclick="alert ('se presionó un boton del raton);" onmouseover="alert ('Acabas de pasar por encima del parrafo');"onmouseout="alert('Acabas de salir del parrafo');" style="background-color:aquamarine ">Puedes presionar este elemento o <br>Pasar el raton por encima...
+                </p>
+                <h3>Función dentro de la etiqueta</h3>
+                <input type="button" value="Presionar" onclick="muestramensaje()">
+                <script>
+                    function muestramensaje(){
+                        alert('Gracias por presionar el boton...');
+                    }
+                </script>
+                <h3>Funciones en un archivo externo</h3>
+                <input id="btnAccion" type="button" value="Presionar">
+            </hgroup>
+            <hgroup>
+                <h2>CSS con Javascript</h2>
+                <h3>Ejemplo No.1</h3>
+                <div id="contenidoA" style="width: 250px; height: 60px; border: 5px solid silver; background-color: white;" onmouseover="this.style.borderColor  = 'black';" onmouseout="this.style.bordderColor = 'silver';">sección de contenido...</div>
+                <h3>Ejemplo No.2</h3>
+                <div id="contenidoB" style="width: 250px; height: 60px; border: 5px solid red; background-color: white;" onmouseover="resalta();" onmouseout="resalta();">seccion de contenido...</div>
+                <h3>Ejemplo No.3</h3>
+                <div id="contenidoC" style="width: 250px; height: 60px; border: 5px solid lightblue; background-color: white;">seccion de contenido...</div>
+            </hgroup>
+            <hgroup>
+                <h2>JavaScript - Selector</h2>
+                <div id="prueba">
+                    <span id="id1" class="clase" title="Blue">Fuchsia</span><br>
+                    <span id="id2" class="clase" title="Green">Blue</span><br>
+                    <span id="id3" class="clase" title="Red">Green</span><br>
+                    <span id="id4" class="clase" title="Orange">Red</span><br>
+                    <span id="id5" class="clase" title="Fuchsia">Orange</span><br>
+                </div>
+                <input type="button" value="Color Title" onclick="colores_A()">
+                 <input type="button" value="Color Content" onclick="colores_B()">
+                <script>
+                    //alert(document.getElementById('id5').title);
+                    //alert(document.querySelector('#prueba.clase').title);
+                   // alert(document.querySelector('#prueba #id2').title);
+                   // alert(document.querySelector('#prueba.clase[title^=R]').title);
+                   // alert(document.querySelectorAll('#prueba .clase'));
+                    function colores_A() {
+                        var listaNodos = document.querySelectorAll('#prueba .clase');
+                        for (var i = 0; i < listaNodos.length; i++) {
+                        var item = listaNodos[i];
+                            item.style.color = 
+                            item.title ;
+                        }
+                    }
+                     function colores_B() {
+                        var listaNodos = document.querySelectorAll('#prueba .clase');
+                        for (var i = 0; i < listaNodos.length; i++) {
+                            var item = listaNodos[i];
+                            item.style.color = item.textContent ;
+                        }
+                    }
+                </script>
+            </hgroup>
+        </main>
+    </body>
+    <script src="Codigo/script.js">
+        /*Funcion que acmbia le color de fondo a rosa mensaje de bienvenida al cargar la pagina boton para saludar utilizando una funcion*/
+    </script>
+</html>

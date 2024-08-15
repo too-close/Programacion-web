@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 09/03/2022
+    Descripcion: Ejercicio 0 parcial 3
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Etiquetas de uso especifico II" />
+        <meta nam="keywords" content="html, tags, style"/>
+		<meta name="generator" content="Brackets" />
+		<meta name="revised" content="Martes, 04 de mayo 2022" />
+        <style type="text/css">
+            h1,h2
+            {
+                text-transform: uppercase;
+            }
+            .original,.translate,.scale,.rotate,.skew
+            {
+                background-color: deepskyblue;
+                width: 300px;
+                height: 100px;
+                border: 2px solid black;
+            }
+            .translate
+            {
+                border: 2px dashed black;
+                transform:  translate(5opx,-50px);
+               /* transform: translateX(50px);
+                transform: translateY(50px);*/
+            }
+            .scale
+            {
+                border: 2px dotted black;
+                transform: scale(0.75,0.75);
+                transform: scale3d(1,1,1.5);
+                /*transform: scaleX(0.75);
+                transform: scaleY(0.5);*/                
+            }
+            .rotate
+            {
+                border: 2px none black;
+                transform: rotate(-15deg);
+                /*transform: rotateX(30deg);
+                transform: rotateY(30deg);*/
+            }
+            .skew
+            {
+                transform: skewX(30deg);
+                transform: skewY(30deg);
+            }
+            .matrix
+            {
+                border: 2px dotted black;
+                transform: matrix(1, 0, 0, 1, 0, 0); /*original*/
+                /*transform: matrix(1.25,0,0,1.25,50,50);*/
+                transform: matrix(0.75, 0.25, 0.5, 0.75, 50, -50);
+            }
+            #element
+            {
+                width: 100px;
+                height: 100px;
+                transform-style: preserve-3d;
+                transition: transform 1.5s;
+                transform: rotate3d(1,1,1,30deg);
+                margin: 50px auto;
+                
+            }
+            #element:hover, #element:focus
+            {
+                transform: rotate3d(1,1,1,30deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+                
+            }
+            .face
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: inherit;
+                font-size: 60px;
+                color: white;
+            }
+            .front
+            {
+                background: rgba(90,90,90,0.7);
+                transform: translateZ(50px);
+            }
+            .back
+            {
+                background: rgba(0,210,0,0.7);
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            .right
+            {
+                background: rgba(210,0,0,0.7);
+                transform: rotateY(90deg) translateZ(50px);
+            }
+            .left
+            {
+                background: rgba(0,0,210,0.7);
+                transform: rotateY(-90deg) translateZ(50px);
+            }
+            .top
+            {
+                background: rgba(210,210,0,0.7);
+                transform: rotateX(90deg) translateZ(50px);
+            }
+            .bottom
+            {
+                background: rgba(210,0,210,0.7);
+                transform: rotateX(-90deg) translateZ(50px);
+            }
+        </style>      
+    </head>
+    <body>
+       <main>
+           <h1>Transformaciones</h1>
+           <hgroup>
+               <h2>Cambio de posición</h2>
+               <div class="original"></div>
+               <br>
+               <div class="translate"></div>        
+           </hgroup>
+           
+              <hgroup>
+               <h2>Cambio de tamaño</h2>
+               <div class="original"></div>
+               <br>
+               <div class="scale"></div>        
+           </hgroup>
+           
+              <hgroup>
+               <h2>Cambio de orientación</h2>
+               <div class="original"></div>
+               <br>
+               <div class="rotate"></div>        
+           </hgroup>
+           
+              <hgroup>
+               <h2>Cambio de oblicuidad</h2>
+               <div class="original"></div>
+               <br>
+               <div class="skew"></div>        
+           </hgroup>
+           
+              <hgroup>
+               <h2>Cambio de multiple</h2>
+               <div class="original"></div>
+               <br>
+               <div class="matrix"></div>        
+           </hgroup>
+           
+              <hgroup>
+               <h2>Transformaciones 3D</h2>
+                <div id="element">
+                    <div class="face front">1</div>
+                    <div class="face back">2</div>
+                    <div class="face right">3</div>
+                    <div class="face left">4</div>
+                    <div class="face top">5</div>
+                    <div class="face bottom">6</div>
+                </div>
+           </hgroup>
+        </main>
+    </body>
+</html>
