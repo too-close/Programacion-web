@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 10/03/2022
+    Descripcion: Ejercicio 3 parcial 2
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Etiquetas Multimedia" />
+        <meta nam="keywords" content="html, tags, audio, video"/>
+		<meta name="generator" content="visual studio" />
+		<meta name="revised" content=" viernes, 18 de marzo 2022" />
+    </head>
+    <body>
+        <main>
+            <h1>Main</h1>
+            <section>
+            <h2>Audio</h2>
+            <h3>Ogg</h3>
+            <audio controls>
+                <source src="Media/horse.ogv" type="audio/ogg">
+                El navegador no soporta el uso de la etiqueta "Audio".
+            </audio>
+            <h3>Mp3</h3>
+            <audio controls>
+                <source src="Media/horse.mp3" type="audio/mpeg">
+                El navegador no soporta el uso de la etiqueta "Audio".
+            </audio>
+            <h3>Ogg y Mp3</h3>
+            <!--Ejemplo de una etiqueta no reconocida por el navegador-->
+            <adio control autoplay loop>
+                <source src="Media/horse.ogv" type="audio/ogg">
+                <source src="Media/horse.mp3" type="audio/mpeg">
+                 El navegador no soporta el uso de la etiqueta "Audio".
+            </adio>
+            </section>
+            <section>
+                <h2>Video</h2>
+                <video controls>
+                    <source src="Media/movie.ogv" type="video/ogg">
+                    <source src="Media/movie.mp4" type="video/mp4">
+                    El navegador no soporta el uso de la etiqueta "Video".
+                </video>
+            </section>
+            <section>
+                <h2>Video con Subtítulos</h2>
+                <video controls>
+                    <source src="Media/friday.mp4" type="video/mp4">
+                    <track default src="Media/friday.vtt" kind="captions">
+                    <track default src="Media/viernes.vtt" kind="captions">
+                    El navegador no soporta el uso de la etiqueta "Video".
+                </video>
+            </section>
+        </main>
+    </body>
+</html>

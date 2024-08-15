@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+    Nombre: "Dávila Esquivel Arturo de Jesús 177234
+    Materia: Programacion Web I
+    Fecha: 10/03/2022
+    Descripcion: Ejercicio 2 parcial 2
+-->
+<html lang="es">
+    <head>
+        <title>Etiquetas HTML</title>
+        <meta charset="utf-8" />
+		<meta name="author" content="Dávila Esquivel Arturo de Jesús 177234" />
+		<meta name="description" content="Etiquetas Multimedia" />
+        <meta nam="keywords" content="html, tags, img, canvas, svg"/>
+		<meta name="generator" content="visual studio" />
+		<meta name="revised" content="Jueves, 10 de marzo 2022" />
+    </head>
+    <body>
+        <main>
+            <h1>Main</h1>
+            <section>
+                <h2>Imagen</h2>
+                <details>
+                    <summary>Enlace Web</summary>
+                    <img alt="UPSLP (Logo)" src="https://www.upslp.edu.mx/upslp/wp-content/uploads/2021/02/instagram_upslp.jpg">
+                </details>
+                <details>
+                    <summary>Original</summary>
+                    <img alt="Casa del mediterrane" src="Media/trulli.jpg" >
+                 </details> 
+                 <details>
+                     <summary>Height (250 pixeles)</summary>
+                     <img alt="Casa del mediterrane" src="Media/trulli.jpg" height="250px">
+                 </details>
+                 <details>
+                     <summary>Widht (25%)</summary>
+                      <img alt="Casa del mediterrane" src="Media/trulli.jpg" width="25%">
+                 </details>  
+             </section>
+             <section>
+                 <h2>Gif</h2>
+                 <img alt="Barra de progreso" src="Media/progress.gif" height="150"> 
+             </section>
+            <section>
+                <h2>Wallpaper</h2>
+                <details>
+                    <summary>Resolución Original</summary>
+                    <figure>
+                        <img alt="Marvel 10 Years" src="Media/MarvelWallpaper.jpg">
+                        <figcaption>Marvel Studios - First 10 Years</figcaption>
+                    </figure>
+                </details>
+            </section>
+            <section>
+                <details>
+                    <summary>Resolución Automática</summary>
+                    <figure>
+                        <img alt="Marvel 10 Years" src="Media/MarvelWallpaper.jpg" width="100%">
+                        <figcaption>Marvel Studios - First 10 Years</figcaption>
+                    </figure>
+                </details>
+            </section>
+            <section>
+                <details>
+                    <summary>Resolución automática (imagen pequeña)</summary>
+                    <figure>
+                        <img alt="Marvel 10 Years" src="Media/MarvelWallpaper_mini.jpg" width="100%">
+                        <figcaption>Marvel Studios - First 10 Years</figcaption>
+                    </figure>
+                </details>
+            </section>
+            <section>
+                <h2>Canvas</h2>
+                <canvas id="myCanvas"></canvas>
+                <script>
+                    var varCanvas =document.getElementById("myCanvas");
+                    var varPlano =
+                    varCanvas.getContext("2d");
+                    varPlano.fillStyle="#FF0000";
+                    varPlano.fillRect(0,0,80,80);
+                </script>
+            </section>
+             <section>
+                 <h2>SVG</h2>
+                 <svg width="400" height="200">
+                     <circle cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="yellow"/>
+                     <rect x="50" y="20" rx="20" ry="20" width="250" height="150" style="fill:red;stroke:black;stroke-width:5;opacity: 0.5"/>
+                 </svg>
+            </section>
+        </main>
+    </body>
+</html>
